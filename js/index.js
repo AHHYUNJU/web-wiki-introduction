@@ -1,19 +1,29 @@
-console.log(
-  "%c" +
-    " __      __  ______   __  __   ______     " +
-    "\n" +
-    "/\\ \\  __/\\ \\ /\\__  _\\ /\\ \\ /\\ \\ /\\__  _\\    " +
-    "\n" +
-    "\\ \\ \\/\\ \\ \\ \\/_\\/\\ \\/ \\ \\ \\/'/'\\/ _/\\ \\/    " +
-    "\n" +
-    " \\ \\ \\ \\ \\ \\ \\ \\ \\ \\  \\ \\ , <    \\ \\ \\    " +
-    "\n" +
-    "  \\ \\ \\_/ \\_\\ \\ \\_\\ \\__\\ \\ \\\\`\\   \\_\\ \\__ " +
-    "\n" +
-    "   \\ `\\___x___/ /\\_____\\\\ \\_\\ \\_\\ /\\_____\\ " +
-    "\n" +
-    "    '/__//__/  /_____/ \\/_/\\/_/ /_____/",
-  "color: #d81b60; font-size: 16px; font-weight: bold;"
-);
+document.addEventListener("DOMContentLoaded", function () {
+  const inputField = document.querySelector("#commentInput");
+  const submitButton = document.querySelector("#submitButton");
+  const commentList = document.querySelector("#commentList");
 
-console.log("알맞은 스크립트를 작성하세요");
+  if (!inputField || !submitButton) {
+    console.error("❌ HTML 요소를 찾을 수 없습니다. id를 확인하세요!");
+    return;
+  }
+  // 버튼 클릭 이벤트 추가
+  submitButton.addEventListener("click", function () {
+    const commentText = inputField.value.trim(); // 입력된 댓글 가져오기
+    console.log("입력된 댓글:", commentText);
+
+    if (commentText === "") {
+      alert("댓글을 입력하세요!");
+      return;
+    }
+
+    // 새로운 댓글을 리스트에 추가
+    const listItem = document.createElement("li"); // <li> 요소 생성
+    listItem.textContent = commentText; // 입력된 텍스트 삽입
+    commentList.appendChild(listItem); // <ul>에 추가
+
+    alert("댓글이 등록되었습니다."); // 알림 메시지 출력
+
+    inputField.value = ""; // 입력 필드 초기화
+  });
+});
