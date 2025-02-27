@@ -153,6 +153,13 @@ ol.contents li a {
   display: flex;
 }
 
+#commentInput {
+  width: 100%; /* 입력 칸을 부모 요소에 맞게 설정 */
+  max-width: 100%; /* 최대 너비 제한 */
+  padding: 12px; /* 내부 여백 */
+  box-sizing: border-box; /* padding과 border 포함하여 너비 계산 */
+}
+
 .buttons {
   display: flex;
   justify-content: flex-end; /* 버튼을 오른쪽 정렬 */
