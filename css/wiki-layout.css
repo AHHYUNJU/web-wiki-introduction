@@ -148,6 +148,9 @@ ol.contents li a {
   color: var(--font-default-color);
 }
 
+.buttons {
+  width: 1000px;
+}
 footer {
   display: flex;
   flex-direction: column;
