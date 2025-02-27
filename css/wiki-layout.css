@@ -148,9 +148,28 @@ ol.contents li a {
   color: var(--font-default-color);
 }
 
-.buttons {
-  width: 1000px;
+.userInput {
+  width: 100%;
+  display: flex;
 }
+
+.buttons {
+  display: flex;
+  justify-content: flex-end; /* 버튼을 오른쪽 정렬 */
+  gap: 8px; /* 버튼 사이 간격 */
+}
+
+.buttons button {
+  padding: 8px 16px; /* 버튼 크기 조정 */
+  border: 1px solid #ccc; /* 버튼 테두리 추가 */
+  background-color: #f8f9fa; /* 버튼 배경색 */
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #e9ecef; /* 마우스 오버 시 색상 변경 */
+}
+
 footer {
   display: flex;
   flex-direction: column;
