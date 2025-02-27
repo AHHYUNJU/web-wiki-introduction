@@ -148,33 +148,40 @@ ol.contents li a {
   color: var(--font-default-color);
 }
 
+.comment-writing-container {
+  width: 100%;
+}
+
 .userInput {
   width: 100%;
-  display: flex;
+  display: block; /* flex 제거 */
 }
 
 #commentInput {
-  width: 100%; /* 입력 칸을 부모 요소에 맞게 설정 */
-  max-width: 100%; /* 최대 너비 제한 */
-  padding: 12px; /* 내부 여백 */
-  box-sizing: border-box; /* padding과 border 포함하여 너비 계산 */
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .buttons {
   display: flex;
-  justify-content: flex-end; /* 버튼을 오른쪽 정렬 */
-  gap: 8px; /* 버튼 사이 간격 */
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 .buttons button {
-  padding: 8px 16px; /* 버튼 크기 조정 */
-  border: 1px solid #ccc; /* 버튼 테두리 추가 */
-  background-color: #f8f9fa; /* 버튼 배경색 */
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
   cursor: pointer;
 }
 
 .buttons button:hover {
-  background-color: #e9ecef; /* 마우스 오버 시 색상 변경 */
+  background-color: #e9ecef;
 }
 
 footer {
